@@ -1,0 +1,440 @@
+* {
+    box-sizing: border-box;
+    letter-spacing: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Product-sans, sans-serif;
+}
+
+.dropdown-toggle2::after {
+    display: none !important;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    nav a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar .navbar-collapse {
+        background: white !important;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar .navbar-collapse {
+        box-shadow: none !important;
+    }
+}
+
+nav a {
+    font-weight: 545;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    display: block !important;
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    bottom: 7px;
+    left: 8px;
+
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: rgb(255, 142, 75) !important;
+    transition: 0.15s ease-in;
+}
+
+/* .nav-link.active,
+.nav-item:has(.dropdown-menu:hover)>.nav-link,
+.nav-link:hover,
+.nav-item:has(:is(#navbarDropdown1:hover, .nav-link:hover, .dropdown-menu:hover)) i {
+    color: rgb(255, 142, 75) !important;
+    transition: 0.15s ease-in;
+} */
+
+.nav-item:has(.nav-link.active)>.nav-link::after,
+/* item is active*/
+/* .nav-item:has(.dropdown-menu:hover)>.nav-link::after, */
+/*dropdown is hovered then heading is orange*/
+.nav-item:has(.nav-link:hover)>.nav-link::after,
+/* item is hovered*/
+.nav-item li:has(.nav-link:hover) .nav-link::after,
+/*dropdown item is hovered*/
+.nav-item li:has(.nav-link.active) .nav-link::after
+
+/*dropdown item is active*/
+    {
+    background-color: rgb(255, 142, 75) !important;
+    transition: 0.15s ease-in;
+}
+
+.nav-item:has(li :is(.nav-link.active, .nav-link:hover))>.nav-link::after {
+    background-color: white !important;
+}
+
+.dropdown:has(:is(#navbarDropdown1:hover, #navbarDropdown1content:hover)) #navbarDropdown1content,
+.dropdown:has(:is(#navbarDropdown2:hover, #navbarDropdown2content:hover)) #navbarDropdown2content {
+    display: block !important;
+    z-index: 1;
+}
+
+#navbarDropdown1content,
+#navbarDropdown2content {
+    transition: display 0.5s ease-out;
+}
+
+@media screen and (min-width: 720px) {
+    .myhead1 {
+        font-size: 60px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .mybg1 {
+        background: white !important;
+        position: relative;
+        z-index: -2;
+    }
+
+    .mybg2::after {
+        width: 1200px;
+        display: block !important;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .mybg2::after {
+        width: 1400px;
+    }
+}
+
+.mybg2::after {
+    content: "";
+    position: absolute;
+    background: rgb(245, 248, 249);
+    height: 120px;
+    bottom: -3%;
+    border-radius: 30px;
+    z-index: -1;
+    left: -3%;
+    right: 0%;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: none;
+}
+
+.myhover:hover {
+    background-color: rgb(255, 142, 75) !important;
+    cursor: pointer;
+}
+
+.myhover:hover :is(p, h5) {
+    color: white !important;
+}
+
+.myhover {
+    transition: 0.3s ease-in;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .myposition {
+        position: relative !important;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(255, 142, 75) !important;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 2px !important;
+    margin-top: 0px !important;
+    padding: 6px !important;
+    background-color: rgb(45, 59, 83);
+    /* slider button - light grey*/
+}
+
+/* .sliderWrapper {
+    :global(.swiper-pagination-bullet) {
+      background: white;
+      width: 1rem;
+      height: 1rem;
+      border-radius: .5rem;
+      opacity: 1;
+  }
+  
+  :global(.swiper-pagination-bullet-active) {
+    background-color: blue;
+    width: 5rem;
+    height: 1rem;
+    border-radius: .5rem;
+  }
+} */
+
+@media screen and (min-width: 1200px) {
+    .myprofilebg1 {
+        background: white !important;
+        position: relative;
+        z-index: 0;
+    }
+
+    .myprofilebg2 {
+        background: rgb(245, 248, 249) !important;
+        height: 400px;
+        width: 1200px;
+        border-radius: 20px;
+        padding: 0 50px 0 50px;
+        z-index: -1;
+    }
+
+    .mytestimonialbg {
+        margin-top: 400px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .myprofilebg2 {
+        width: 1400px;
+    }
+}
+
+.owl-nav {
+    margin: 60px;
+}
+
+.owl-dot span {
+    border-radius: 2px !important;
+    margin-top: 0px !important;
+    padding: 6px !important;
+    background-color: rgb(245, 248, 249) !important;
+}
+
+.owl-dots .active span {
+    background-color: rgb(255, 142, 75) !important;
+}
+
+.owl-next,
+.owl-prev {
+    margin-right: 10% !important;
+    position: absolute;
+    bottom: 20%;
+    background: transparent !important;
+}
+
+.owl-next {
+    right: 0;
+}
+
+.owl-prev {
+    right: 75px;
+}
+
+:is(.owl-next, .owl-prev) span:hover {
+    background: white !important;
+    color: rgb(255, 142, 75) !important;
+}
+
+:is(.owl-next, .owl-prev) span {
+    color: white !important;
+    font-size: 40px;
+    padding: 5px 23px 10px 23px !important;
+    background: rgb(255, 142, 75) !important;
+    border-radius: 50% !important;
+    border: 1px solid rgb(255, 142, 75) !important;
+}
+
+.page-link:hover {
+    background: rgb(255, 142, 75);
+    color: white !important;
+}
+
+.page-link:focus {
+    background: rgb(255, 142, 75);
+    color: white !important;
+}
+
+.active>.page-link {
+    background: rgb(255, 142, 75);
+    color: white !important;
+}
+
+@media screen and (min-width: 576px) {
+    .mybutton {
+        min-width: 300px;
+    }
+}
+
+.mycontactbg {
+    background: url(bg-contact.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 40px;
+}
+
+.iti__flag {
+    background-image: url("path/to/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("path/to/flags@2x.png");
+    }
+}
+
+.iti {
+    width: 100%;
+}
+
+.form-check-input:checked[type=radio] {
+    background-image: url(cricle.svg) !important;
+    background-color: white;
+    border: 2px solid rgb(255, 142, 75);
+}
+
+.form-check .form-check-input {
+    width: 20px;
+    height: 20px;
+    background-size: 24px;
+}
+
+.myselectinput:has(input:focus) .position-absolute{
+    display: block !important;
+    background: white;
+    z-index: 1;
+}
+
+.myselectinput:hover :is(div ,input){
+    cursor: pointer;
+}
+
+.myselectinput input:focus{
+    outline: none;
+}
+
+.myinput:focus, textarea:focus{
+    outline: 1px solid rgb(255, 142, 75);
+    border: 0 !important;
+}
+
+.myselectinput .option:hover{
+    background: rgb(245, 248, 249);
+}
+
+.ui-datepicker{
+    padding: 15px !important;
+    border-radius: 20px !important;
+    box-shadow: 2px 2px 10px rgb(187, 187, 187) !important;
+}
+
+.ui-widget.ui-widget-content {
+    border: none !important;
+}
+
+.ui-widget-header {
+    border: none !important;
+    background: white !important;
+    color: rgb(45, 59, 83) !important;
+}
+
+.ui-datepicker-calendar thead th{
+    color: rgb(45, 59, 83) !important;
+    font-weight: 400 !important; 
+}
+.ui-datepicker td span, .ui-datepicker td a {
+    border: none !important;
+    background: rgb(238,238,238) !important;
+    border-radius: 50% ;
+    text-align: center !important;
+    margin: 2px !important;
+    color: rgb(45, 59, 83) !important;
+}
+
+
+/* body {
+    padding:50px;
+    background-color:white;
+}
+.s-hidden {
+    visibility:hidden;
+    padding-right:10px;
+}
+.select {
+    width: 100%;
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+    font:normal 11px/22px Arial, Sans-Serif;
+    color:black;
+    border:1px solid #000000;
+}
+.styledSelect {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:white;
+    padding:0 10px;
+    font-weight:bold;
+}
+.styledSelect:after {
+    content:"";
+    width:0;
+    height:0;
+    border:5px solid transparent;
+    border-color:black transparent transparent transparent;
+    position:absolute;
+    top:9px;
+    right:6px;
+}
+.styledSelect:active, .styledSelect.active {
+    background-color:#eee;
+}
+.options {
+    display:none;
+    position:absolute;
+    top:100%;
+    right:0;
+    left:0;
+    z-index:999;
+    margin:0 0;
+    padding:0 0;
+    list-style:none;
+    border:1px solid #000000;
+    background-color:white;
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.options li {
+    padding:0 6px;
+    margin:0 0;
+    padding:0 10px;
+}
+.options li:hover {
+    background-color:#39f;
+    color:white;
+} */
+
+
+select {
+    border: 0px solid white !important;
+}
